@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66613E4F181CCC550036EA19 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66613E4E181CCC550036EA19 /* Cocoa.framework */; };
+		66613E59181CCC550036EA19 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66613E57181CCC550036EA19 /* InfoPlist.strings */; };
+		66613E5B181CCC550036EA19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66613E5A181CCC550036EA19 /* main.m */; };
+		66613E5F181CCC550036EA19 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 66613E5D181CCC550036EA19 /* Credits.rtf */; };
+		66613E62181CCC550036EA19 /* HMCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66613E61181CCC550036EA19 /* HMCAppDelegate.m */; };
+		66613E65181CCC550036EA19 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66613E63181CCC550036EA19 /* MainMenu.xib */; };
+		66613E67181CCC550036EA19 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66613E66181CCC550036EA19 /* Images.xcassets */; };
+		66613E6E181CCC550036EA19 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66613E6D181CCC550036EA19 /* XCTest.framework */; };
+		66613E6F181CCC550036EA19 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66613E4E181CCC550036EA19 /* Cocoa.framework */; };
+		66613E77181CCC550036EA19 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66613E75181CCC550036EA19 /* InfoPlist.strings */; };
+		66613E79181CCC550036EA19 /* Photo_Face_FinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66613E78181CCC550036EA19 /* Photo_Face_FinderTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66613E70181CCC550036EA19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66613E43181CCC550036EA19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66613E4A181CCC550036EA19;
+			remoteInfo = "Photo Face Finder";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		66613E4B181CCC550036EA19 /* Photo Face Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo Face Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66613E4E181CCC550036EA19 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		66613E51181CCC550036EA19 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		66613E52181CCC550036EA19 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		66613E53181CCC550036EA19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		66613E56181CCC550036EA19 /* Photo Face Finder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Photo Face Finder-Info.plist"; sourceTree = "<group>"; };
+		66613E58181CCC550036EA19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		66613E5A181CCC550036EA19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		66613E5C181CCC550036EA19 /* Photo Face Finder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Photo Face Finder-Prefix.pch"; sourceTree = "<group>"; };
+		66613E5E181CCC550036EA19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		66613E60181CCC550036EA19 /* HMCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMCAppDelegate.h; sourceTree = "<group>"; };
+		66613E61181CCC550036EA19 /* HMCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMCAppDelegate.m; sourceTree = "<group>"; };
+		66613E64181CCC550036EA19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		66613E66181CCC550036EA19 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		66613E6C181CCC550036EA19 /* Photo Face FinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Photo Face FinderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66613E6D181CCC550036EA19 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		66613E74181CCC550036EA19 /* Photo Face FinderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Photo Face FinderTests-Info.plist"; sourceTree = "<group>"; };
+		66613E76181CCC550036EA19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		66613E78181CCC550036EA19 /* Photo_Face_FinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Photo_Face_FinderTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66613E48181CCC550036EA19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66613E4F181CCC550036EA19 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66613E69181CCC550036EA19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66613E6F181CCC550036EA19 /* Cocoa.framework in Frameworks */,
+				66613E6E181CCC550036EA19 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66613E42181CCC550036EA19 = {
+			isa = PBXGroup;
+			children = (
+				66613E54181CCC550036EA19 /* Photo Face Finder */,
+				66613E72181CCC550036EA19 /* Photo Face FinderTests */,
+				66613E4D181CCC550036EA19 /* Frameworks */,
+				66613E4C181CCC550036EA19 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66613E4C181CCC550036EA19 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66613E4B181CCC550036EA19 /* Photo Face Finder.app */,
+				66613E6C181CCC550036EA19 /* Photo Face FinderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66613E4D181CCC550036EA19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66613E4E181CCC550036EA19 /* Cocoa.framework */,
+				66613E6D181CCC550036EA19 /* XCTest.framework */,
+				66613E50181CCC550036EA19 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66613E50181CCC550036EA19 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66613E51181CCC550036EA19 /* AppKit.framework */,
+				66613E52181CCC550036EA19 /* CoreData.framework */,
+				66613E53181CCC550036EA19 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		66613E54181CCC550036EA19 /* Photo Face Finder */ = {
+			isa = PBXGroup;
+			children = (
+				66613E60181CCC550036EA19 /* HMCAppDelegate.h */,
+				66613E61181CCC550036EA19 /* HMCAppDelegate.m */,
+				66613E63181CCC550036EA19 /* MainMenu.xib */,
+				66613E66181CCC550036EA19 /* Images.xcassets */,
+				66613E55181CCC550036EA19 /* Supporting Files */,
+			);
+			path = "Photo Face Finder";
+			sourceTree = "<group>";
+		};
+		66613E55181CCC550036EA19 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66613E56181CCC550036EA19 /* Photo Face Finder-Info.plist */,
+				66613E57181CCC550036EA19 /* InfoPlist.strings */,
+				66613E5A181CCC550036EA19 /* main.m */,
+				66613E5C181CCC550036EA19 /* Photo Face Finder-Prefix.pch */,
+				66613E5D181CCC550036EA19 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		66613E72181CCC550036EA19 /* Photo Face FinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				66613E78181CCC550036EA19 /* Photo_Face_FinderTests.m */,
+				66613E73181CCC550036EA19 /* Supporting Files */,
+			);
+			path = "Photo Face FinderTests";
+			sourceTree = "<group>";
+		};
+		66613E73181CCC550036EA19 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66613E74181CCC550036EA19 /* Photo Face FinderTests-Info.plist */,
+				66613E75181CCC550036EA19 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66613E4A181CCC550036EA19 /* Photo Face Finder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66613E7C181CCC550036EA19 /* Build configuration list for PBXNativeTarget "Photo Face Finder" */;
+			buildPhases = (
+				66613E47181CCC550036EA19 /* Sources */,
+				66613E48181CCC550036EA19 /* Frameworks */,
+				66613E49181CCC550036EA19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Photo Face Finder";
+			productName = "Photo Face Finder";
+			productReference = 66613E4B181CCC550036EA19 /* Photo Face Finder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66613E6B181CCC550036EA19 /* Photo Face FinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66613E7F181CCC550036EA19 /* Build configuration list for PBXNativeTarget "Photo Face FinderTests" */;
+			buildPhases = (
+				66613E68181CCC550036EA19 /* Sources */,
+				66613E69181CCC550036EA19 /* Frameworks */,
+				66613E6A181CCC550036EA19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66613E71181CCC550036EA19 /* PBXTargetDependency */,
+			);
+			name = "Photo Face FinderTests";
+			productName = "Photo Face FinderTests";
+			productReference = 66613E6C181CCC550036EA19 /* Photo Face FinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66613E43181CCC550036EA19 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HMC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Homemade Concoctions";
+				TargetAttributes = {
+					66613E6B181CCC550036EA19 = {
+						TestTargetID = 66613E4A181CCC550036EA19;
+					};
+				};
+			};
+			buildConfigurationList = 66613E46181CCC550036EA19 /* Build configuration list for PBXProject "Photo Face Finder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66613E42181CCC550036EA19;
+			productRefGroup = 66613E4C181CCC550036EA19 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66613E4A181CCC550036EA19 /* Photo Face Finder */,
+				66613E6B181CCC550036EA19 /* Photo Face FinderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66613E49181CCC550036EA19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66613E59181CCC550036EA19 /* InfoPlist.strings in Resources */,
+				66613E67181CCC550036EA19 /* Images.xcassets in Resources */,
+				66613E5F181CCC550036EA19 /* Credits.rtf in Resources */,
+				66613E65181CCC550036EA19 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66613E6A181CCC550036EA19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66613E77181CCC550036EA19 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66613E47181CCC550036EA19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66613E5B181CCC550036EA19 /* main.m in Sources */,
+				66613E62181CCC550036EA19 /* HMCAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66613E68181CCC550036EA19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66613E79181CCC550036EA19 /* Photo_Face_FinderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66613E71181CCC550036EA19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66613E4A181CCC550036EA19 /* Photo Face Finder */;
+			targetProxy = 66613E70181CCC550036EA19 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		66613E57181CCC550036EA19 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66613E58181CCC550036EA19 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		66613E5D181CCC550036EA19 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66613E5E181CCC550036EA19 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		66613E63181CCC550036EA19 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66613E64181CCC550036EA19 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		66613E75181CCC550036EA19 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66613E76181CCC550036EA19 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66613E7A181CCC550036EA19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		66613E7B181CCC550036EA19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		66613E7D181CCC550036EA19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Photo Face Finder/Photo Face Finder-Prefix.pch";
+				INFOPLIST_FILE = "Photo Face Finder/Photo Face Finder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		66613E7E181CCC550036EA19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Photo Face Finder/Photo Face Finder-Prefix.pch";
+				INFOPLIST_FILE = "Photo Face Finder/Photo Face Finder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		66613E80181CCC550036EA19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Photo Face Finder.app/Contents/MacOS/Photo Face Finder";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Photo Face Finder/Photo Face Finder-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Photo Face FinderTests/Photo Face FinderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		66613E81181CCC550036EA19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Photo Face Finder.app/Contents/MacOS/Photo Face Finder";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Photo Face Finder/Photo Face Finder-Prefix.pch";
+				INFOPLIST_FILE = "Photo Face FinderTests/Photo Face FinderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66613E46181CCC550036EA19 /* Build configuration list for PBXProject "Photo Face Finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66613E7A181CCC550036EA19 /* Debug */,
+				66613E7B181CCC550036EA19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66613E7C181CCC550036EA19 /* Build configuration list for PBXNativeTarget "Photo Face Finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66613E7D181CCC550036EA19 /* Debug */,
+				66613E7E181CCC550036EA19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		66613E7F181CCC550036EA19 /* Build configuration list for PBXNativeTarget "Photo Face FinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66613E80181CCC550036EA19 /* Debug */,
+				66613E81181CCC550036EA19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66613E43181CCC550036EA19 /* Project object */;
+}

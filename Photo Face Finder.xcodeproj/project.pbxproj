@@ -18,6 +18,9 @@
 		66613E6F181CCC550036EA19 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66613E4E181CCC550036EA19 /* Cocoa.framework */; };
 		66613E77181CCC550036EA19 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66613E75181CCC550036EA19 /* InfoPlist.strings */; };
 		66613E79181CCC550036EA19 /* Photo_Face_FinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66613E78181CCC550036EA19 /* Photo_Face_FinderTests.m */; };
+		66613E88181CE5A80036EA19 /* HMCPhotosWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66613E86181CE5A80036EA19 /* HMCPhotosWindowController.m */; };
+		66613E89181CE5A80036EA19 /* HMCPhotosWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66613E87181CE5A80036EA19 /* HMCPhotosWindowController.xib */; };
+		66613E8C181CF96A0036EA19 /* HMCPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 66613E8B181CF96A0036EA19 /* HMCPhoto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,11 @@
 		66613E74181CCC550036EA19 /* Photo Face FinderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Photo Face FinderTests-Info.plist"; sourceTree = "<group>"; };
 		66613E76181CCC550036EA19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		66613E78181CCC550036EA19 /* Photo_Face_FinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Photo_Face_FinderTests.m; sourceTree = "<group>"; };
+		66613E85181CE5A80036EA19 /* HMCPhotosWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMCPhotosWindowController.h; sourceTree = "<group>"; };
+		66613E86181CE5A80036EA19 /* HMCPhotosWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMCPhotosWindowController.m; sourceTree = "<group>"; };
+		66613E87181CE5A80036EA19 /* HMCPhotosWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMCPhotosWindowController.xib; sourceTree = "<group>"; };
+		66613E8A181CF96A0036EA19 /* HMCPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMCPhoto.h; sourceTree = "<group>"; };
+		66613E8B181CF96A0036EA19 /* HMCPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMCPhoto.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,11 @@
 		66613E54181CCC550036EA19 /* Photo Face Finder */ = {
 			isa = PBXGroup;
 			children = (
+				66613E8A181CF96A0036EA19 /* HMCPhoto.h */,
+				66613E8B181CF96A0036EA19 /* HMCPhoto.m */,
+				66613E85181CE5A80036EA19 /* HMCPhotosWindowController.h */,
+				66613E86181CE5A80036EA19 /* HMCPhotosWindowController.m */,
+				66613E87181CE5A80036EA19 /* HMCPhotosWindowController.xib */,
 				66613E60181CCC550036EA19 /* HMCAppDelegate.h */,
 				66613E61181CCC550036EA19 /* HMCAppDelegate.m */,
 				66613E63181CCC550036EA19 /* MainMenu.xib */,
@@ -235,6 +248,7 @@
 				66613E67181CCC550036EA19 /* Images.xcassets in Resources */,
 				66613E5F181CCC550036EA19 /* Credits.rtf in Resources */,
 				66613E65181CCC550036EA19 /* MainMenu.xib in Resources */,
+				66613E89181CE5A80036EA19 /* HMCPhotosWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				66613E5B181CCC550036EA19 /* main.m in Sources */,
+				66613E88181CE5A80036EA19 /* HMCPhotosWindowController.m in Sources */,
 				66613E62181CCC550036EA19 /* HMCAppDelegate.m in Sources */,
+				66613E8C181CF96A0036EA19 /* HMCPhoto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +481,7 @@
 				66613E7E181CCC550036EA19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		66613E7F181CCC550036EA19 /* Build configuration list for PBXNativeTarget "Photo Face FinderTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +490,7 @@
 				66613E81181CCC550036EA19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

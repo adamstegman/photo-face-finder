@@ -1,6 +1,8 @@
 #import "HMCAppDelegate.h"
+#import "HMCPhotosWindowController.h"
 
 @interface HMCAppDelegate ()
+- (void)openWindowForDirectory:(NSURL *)directory;
 - (NSURL *)requestPhotoDirectory;
 @end
 
@@ -10,8 +12,18 @@
 {
   // Insert code here to initialize your application
   NSURL *directory = [self requestPhotoDirectory];
-  NSLog(@"Chose directory: %@", [directory description]);
-  // TODO: handle nil
+  if (directory) {
+    [self openWindowForDirectory:directory];
+  }
+}
+
+- (void)openWindowForDirectory:(NSURL *)directory {
+  if (!self.directoryWindows) {
+    self.directoryWindows = [NSMutableDictionary dictionary];
+  }
+  HMCPhotosWindowController *photosWindow = [[HMCPhotosWindowController alloc] initWithDirectory:directory];
+  self.directoryWindows[directory] = photosWindow;
+  [photosWindow showWindow:nil];
 }
 
 - (NSURL *)requestPhotoDirectory {

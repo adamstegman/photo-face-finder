@@ -2,6 +2,6 @@
 
 @interface HMCAppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
+@property (strong, nonatomic) NSMutableDictionary *directoryWindows;
 
 @end

@@ -6,6 +6,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="HMCPhotosWindowController">
             <connections>
+                <outlet property="photosArrayController" destination="NNl-dt-H0E" id="pOn-xu-zxy"/>
                 <outlet property="progressIndicator" destination="76b-7Z-hp4" id="UZp-Ka-873"/>
                 <outlet property="progressLabel" destination="3RK-7A-rMF" id="kwy-F7-9ev"/>
                 <outlet property="progressPanel" destination="Emo-ft-kpb" id="ytH-dE-Q26"/>
@@ -36,6 +37,7 @@
                                     <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <connections>
                                         <binding destination="NNl-dt-H0E" name="content" keyPath="arrangedObjects" id="Sje-Gv-63R"/>
+                                        <binding destination="NNl-dt-H0E" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="Sje-Gv-63R" id="QK6-2w-YeX"/>
                                         <outlet property="itemPrototype" destination="OHc-b7-yXs" id="1gY-am-5Gb"/>
                                     </connections>
                                 </collectionView>

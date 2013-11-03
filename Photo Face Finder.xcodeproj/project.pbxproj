@@ -21,6 +21,8 @@
 		66613E88181CE5A80036EA19 /* HMCPhotosWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66613E86181CE5A80036EA19 /* HMCPhotosWindowController.m */; };
 		66613E89181CE5A80036EA19 /* HMCPhotosWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66613E87181CE5A80036EA19 /* HMCPhotosWindowController.xib */; };
 		66613E8C181CF96A0036EA19 /* HMCPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 66613E8B181CF96A0036EA19 /* HMCPhoto.m */; };
+		66613E901822338E0036EA19 /* HMCPhotoWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66613E8E1822338E0036EA19 /* HMCPhotoWindowController.m */; };
+		66613E911822338E0036EA19 /* HMCPhotoWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66613E8F1822338E0036EA19 /* HMCPhotoWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,9 @@
 		66613E87181CE5A80036EA19 /* HMCPhotosWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMCPhotosWindowController.xib; sourceTree = "<group>"; };
 		66613E8A181CF96A0036EA19 /* HMCPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMCPhoto.h; sourceTree = "<group>"; };
 		66613E8B181CF96A0036EA19 /* HMCPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMCPhoto.m; sourceTree = "<group>"; };
+		66613E8D1822338E0036EA19 /* HMCPhotoWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMCPhotoWindowController.h; sourceTree = "<group>"; };
+		66613E8E1822338E0036EA19 /* HMCPhotoWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMCPhotoWindowController.m; sourceTree = "<group>"; };
+		66613E8F1822338E0036EA19 /* HMCPhotoWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMCPhotoWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +133,9 @@
 				66613E85181CE5A80036EA19 /* HMCPhotosWindowController.h */,
 				66613E86181CE5A80036EA19 /* HMCPhotosWindowController.m */,
 				66613E87181CE5A80036EA19 /* HMCPhotosWindowController.xib */,
+				66613E8D1822338E0036EA19 /* HMCPhotoWindowController.h */,
+				66613E8E1822338E0036EA19 /* HMCPhotoWindowController.m */,
+				66613E8F1822338E0036EA19 /* HMCPhotoWindowController.xib */,
 				66613E60181CCC550036EA19 /* HMCAppDelegate.h */,
 				66613E61181CCC550036EA19 /* HMCAppDelegate.m */,
 				66613E63181CCC550036EA19 /* MainMenu.xib */,
@@ -245,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66613E59181CCC550036EA19 /* InfoPlist.strings in Resources */,
+				66613E911822338E0036EA19 /* HMCPhotoWindowController.xib in Resources */,
 				66613E67181CCC550036EA19 /* Images.xcassets in Resources */,
 				66613E5F181CCC550036EA19 /* Credits.rtf in Resources */,
 				66613E65181CCC550036EA19 /* MainMenu.xib in Resources */,
@@ -271,6 +280,7 @@
 				66613E88181CE5A80036EA19 /* HMCPhotosWindowController.m in Sources */,
 				66613E62181CCC550036EA19 /* HMCAppDelegate.m in Sources */,
 				66613E8C181CF96A0036EA19 /* HMCPhoto.m in Sources */,
+				66613E901822338E0036EA19 /* HMCPhotoWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

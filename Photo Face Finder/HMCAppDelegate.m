@@ -21,9 +21,11 @@
   if (!self.directoryWindows) {
     self.directoryWindows = [NSMutableDictionary dictionary];
   }
-  HMCPhotosWindowController *photosWindow = [[HMCPhotosWindowController alloc] initWithDirectory:directory];
-  self.directoryWindows[directory] = photosWindow;
-  [photosWindow showWindow:nil];
+  if (!self.directoryWindows[directory]) {
+    HMCPhotosWindowController *photosWindow = [[HMCPhotosWindowController alloc] initWithDirectory:directory];
+    self.directoryWindows[directory] = photosWindow;
+  }
+  [self.directoryWindows[directory] showWindow:nil];
 }
 
 - (NSURL *)requestPhotoDirectory {

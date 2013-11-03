@@ -1,14 +1,15 @@
 #import "HMCPhotosWindowController.h"
+#import "HMCPhotoWindowController.h"
 #import "HMCPhoto.h"
 
 static NSArray *HMCPhotoTypes;
 
 @interface HMCPhotosWindowController ()
 + (NSArray *)photoTypes;
-+ (HMCPhoto *)photoFromResource:(NSURL *)photoResource;
 - (NSString *)directoryName;
 - (void)indicateNumberOfPhotos;
 - (void)indicatePhotoSlurping:(BOOL)inProgress;
+- (void)openWindowForPhoto:(HMCPhoto *)photo;
 - (void)slurpPhotos;
 @end
 
@@ -40,6 +41,11 @@ static NSArray *HMCPhotoTypes;
 
   self.window.title = [self directoryName];
 
+  [self.photosArrayController addObserver:self
+                               forKeyPath:@"selectionIndex"
+                                  options:NSKeyValueObservingOptionNew
+                                  context:nil];
+
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
     [self slurpPhotos];
   });
@@ -50,20 +56,6 @@ static NSArray *HMCPhotoTypes;
     HMCPhotoTypes = @[@"public.jpeg"];
   }
   return HMCPhotoTypes;
-}
-
-+ (HMCPhoto *)photoFromResource:(NSURL *)photoResource {
-  HMCPhoto *photo = [[HMCPhoto alloc] init];
-
-  NSString *photoPath;
-  [photoResource getResourceValue:&photoPath forKey:NSURLPathKey error:NULL];
-  photo.image = [[NSImage alloc] initWithContentsOfFile:photoPath];
-
-  NSString *photoName;
-  [photoResource getResourceValue:&photoName forKey:NSURLNameKey error:NULL];
-  photo.name = photoName;
-
-  return photo;
 }
 
 - (NSString *)directoryName {
@@ -88,6 +80,17 @@ static NSArray *HMCPhotoTypes;
   }
 }
 
+- (void)openWindowForPhoto:(HMCPhoto *)photo {
+  if (!self.photoWindows) {
+    self.photoWindows = [NSMutableDictionary dictionary];
+  }
+  if (!self.photoWindows[photo]) {
+    HMCPhotoWindowController *photoWindow = [[HMCPhotoWindowController alloc] initWithPhoto:photo];
+    self.photoWindows[photo] = photoWindow;
+  }
+  [self.photoWindows[photo] showWindow:nil];
+}
+
 - (void)slurpPhotos {
   [self indicatePhotoSlurping:YES];
   NSDirectoryEnumerator *photoEnumerator = [[NSFileManager defaultManager]
@@ -102,13 +105,25 @@ static NSArray *HMCPhotoTypes;
       NSString *photoType;
       [photoResource getResourceValue:&photoType forKey:NSURLTypeIdentifierKey error:NULL];
       if ([self.class isPhotoType:photoType]) {
-        HMCPhoto *photo = [self.class photoFromResource:photoResource];
+        HMCPhoto *photo = [[HMCPhoto alloc] initWithURL:photoResource];
         [self insertObject:photo inPhotosAtIndex:[self countOfPhotos]];
         [self indicateNumberOfPhotos];
       }
     }
   }
   [self indicatePhotoSlurping:NO];
+}
+
+#pragma mark - observing selected photos
+
+-(void) observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context {
+  if ([keyPath isEqualTo:@"selectionIndex"] && [self.photosArrayController selectionIndex]) {
+    HMCPhoto *selectedPhoto = [[self.photosArrayController selectedObjects] firstObject];
+    [self openWindowForPhoto:selectedPhoto];
+  }
 }
 
 #pragma mark - photos KVO-compliance

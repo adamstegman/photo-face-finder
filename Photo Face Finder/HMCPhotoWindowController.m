@@ -2,7 +2,6 @@
 #import "HMCPhoto.h"
 
 @interface HMCPhotoWindowController ()
-
 @end
 
 @implementation HMCPhotoWindowController
@@ -28,6 +27,15 @@
   self.window.title = self.photo.name;
   self.window.representedURL = self.photo.url;
   self.photoView.image = self.photo.image;
+  self.tagsField.objectValue = self.photo.tags;
+  self.tagsField.delegate = self;
+}
+
+#pragma mark - NSTokenFieldDelegate
+
+- (NSArray *)tokenField:(NSTokenField *)tokenField shouldAddObjects:(NSArray *)tokens atIndex:(NSUInteger)index {
+  [self.photo insertTags:tokens atIndex:index];
+  return tokens;
 }
 
 @end

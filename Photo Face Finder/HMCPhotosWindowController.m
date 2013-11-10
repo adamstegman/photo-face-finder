@@ -84,11 +84,11 @@ static NSArray *HMCPhotoTypes;
   if (!self.photoWindows) {
     self.photoWindows = [NSMutableDictionary dictionary];
   }
-  if (!self.photoWindows[photo]) {
+  if (!self.photoWindows[photo.url]) {
     HMCPhotoWindowController *photoWindow = [[HMCPhotoWindowController alloc] initWithPhoto:photo];
-    self.photoWindows[photo] = photoWindow;
+    self.photoWindows[photo.url] = photoWindow;
   }
-  [self.photoWindows[photo] showWindow:nil];
+  [self.photoWindows[photo.url] showWindow:nil];
 }
 
 - (void)slurpPhotos {

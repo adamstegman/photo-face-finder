@@ -2,7 +2,7 @@
 
 @class HMCPhoto;
 
-@interface HMCPhotoWindowController : NSWindowController
+@interface HMCPhotoWindowController : NSWindowController <NSTokenFieldDelegate>
 
 @property (weak) IBOutlet NSImageView *photoView;
 @property (weak) IBOutlet NSTokenField *tagsField;

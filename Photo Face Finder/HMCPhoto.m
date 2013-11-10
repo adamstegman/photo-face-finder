@@ -1,6 +1,13 @@
 #import "HMCPhoto.h"
 
+@interface HMCPhoto ()
+@end
+
 @implementation HMCPhoto
+
+@dynamic image;
+@dynamic name;
+@dynamic tags;
 
 - (id)init {
   return [self initWithURL:nil];
@@ -32,11 +39,26 @@
   return _name;
 }
 
+- (NSArray *)tags {
+  NSArray *tags;
+  [self.url getResourceValue:&tags forKey:NSURLTagNamesKey error:NULL];
+  if (tags) {
+    return tags;
+  } else {
+    return [NSArray array];
+  }
+}
+
+- (void)insertTags:(NSArray *)tags atIndex:(NSUInteger)index {
+  NSMutableArray *newTags = [self.tags mutableCopy];
+  [newTags insertObjects:tags atIndexes:[NSIndexSet indexSetWithIndex:index]];
+  [self.url setResourceValue:newTags forKey:NSURLTagNamesKey error:NULL];
+}
+
 #pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
-  // FIXME: copy attributes if adding something mutable like tags
-  return self;
+  return [[[self class] allocWithZone:zone] initWithURL:self.url];
 }
 
 @end

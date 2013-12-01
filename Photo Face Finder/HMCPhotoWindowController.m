@@ -34,8 +34,15 @@
 #pragma mark - NSTokenFieldDelegate
 
 - (NSArray *)tokenField:(NSTokenField *)tokenField shouldAddObjects:(NSArray *)tokens atIndex:(NSUInteger)index {
-  [self.photo insertTags:tokens atIndex:index];
-  return tokens;
+  NSArray *existingTags = self.photo.tags;
+  NSMutableArray *addedTags = [NSMutableArray array];
+  for (NSString *tag in tokens) {
+    if (![existingTags containsObject:tag]) {
+      [addedTags addObject:tag];
+    }
+  }
+  [self.photo insertTags:addedTags atIndex:index];
+  return addedTags;
 }
 
 @end

@@ -46,8 +46,9 @@ static NSArray *HMCPhotoTypes;
                                   options:NSKeyValueObservingOptionNew
                                   context:nil];
 
+  __weak __block id _self = self;
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
-    [self slurpPhotos];
+    [_self slurpPhotos];
   });
 }
 

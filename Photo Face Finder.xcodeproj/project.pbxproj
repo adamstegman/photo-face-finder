@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66427C09184BF36B0090BAEA /* HMCPhotoTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 66427C08184BF36B0090BAEA /* HMCPhotoTag.m */; };
+		66427C0E184C169F0090BAEA /* NSArray+HMCArrayMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 66427C0D184C169F0090BAEA /* NSArray+HMCArrayMap.m */; };
 		66613E4F181CCC550036EA19 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66613E4E181CCC550036EA19 /* Cocoa.framework */; };
 		66613E59181CCC550036EA19 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66613E57181CCC550036EA19 /* InfoPlist.strings */; };
 		66613E5B181CCC550036EA19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66613E5A181CCC550036EA19 /* main.m */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		66427C07184BF36B0090BAEA /* HMCPhotoTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMCPhotoTag.h; sourceTree = "<group>"; };
+		66427C08184BF36B0090BAEA /* HMCPhotoTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMCPhotoTag.m; sourceTree = "<group>"; };
+		66427C0C184C169F0090BAEA /* NSArray+HMCArrayMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+HMCArrayMap.h"; sourceTree = "<group>"; };
+		66427C0D184C169F0090BAEA /* NSArray+HMCArrayMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+HMCArrayMap.m"; sourceTree = "<group>"; };
 		66613E4B181CCC550036EA19 /* Photo Face Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo Face Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66613E4E181CCC550036EA19 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		66613E51181CCC550036EA19 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -63,6 +69,7 @@
 		66613E8D1822338E0036EA19 /* HMCPhotoWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMCPhotoWindowController.h; sourceTree = "<group>"; };
 		66613E8E1822338E0036EA19 /* HMCPhotoWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMCPhotoWindowController.m; sourceTree = "<group>"; };
 		66613E8F1822338E0036EA19 /* HMCPhotoWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMCPhotoWindowController.xib; sourceTree = "<group>"; };
+		6694B538184F1637000537E6 /* HMCPhotoTagDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMCPhotoTagDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +148,11 @@
 				66613E63181CCC550036EA19 /* MainMenu.xib */,
 				66613E66181CCC550036EA19 /* Images.xcassets */,
 				66613E55181CCC550036EA19 /* Supporting Files */,
+				66427C07184BF36B0090BAEA /* HMCPhotoTag.h */,
+				66427C08184BF36B0090BAEA /* HMCPhotoTag.m */,
+				66427C0C184C169F0090BAEA /* NSArray+HMCArrayMap.h */,
+				66427C0D184C169F0090BAEA /* NSArray+HMCArrayMap.m */,
+				6694B538184F1637000537E6 /* HMCPhotoTagDelegate.h */,
 			);
 			path = "Photo Face Finder";
 			sourceTree = "<group>";
@@ -276,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66427C0E184C169F0090BAEA /* NSArray+HMCArrayMap.m in Sources */,
+				66427C09184BF36B0090BAEA /* HMCPhotoTag.m in Sources */,
 				66613E5B181CCC550036EA19 /* main.m in Sources */,
 				66613E88181CE5A80036EA19 /* HMCPhotosWindowController.m in Sources */,
 				66613E62181CCC550036EA19 /* HMCAppDelegate.m in Sources */,

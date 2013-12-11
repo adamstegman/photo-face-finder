@@ -1,8 +1,9 @@
 #import <Cocoa/Cocoa.h>
+#import "HMCPhotoTagDelegate.h"
 
 @class HMCPhoto;
 
-@interface HMCPhotoWindowController : NSWindowController <NSTokenFieldDelegate>
+@interface HMCPhotoWindowController : NSWindowController <NSTokenFieldDelegate, HMCPhotoTagDelegate>
 
 @property (weak) IBOutlet NSImageView *photoView;
 @property (weak) IBOutlet NSTokenField *tagsField;

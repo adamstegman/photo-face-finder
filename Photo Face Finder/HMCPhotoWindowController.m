@@ -1,7 +1,10 @@
 #import "HMCPhotoWindowController.h"
 #import "HMCPhoto.h"
+#import "HMCPhotoTag.h"
+#import "NSArray+HMCArrayMap.h"
 
 @interface HMCPhotoWindowController ()
+- (NSArray *)photoTagsFromTagNames:(NSArray *)tagNames;
 @end
 
 @implementation HMCPhotoWindowController
@@ -27,22 +30,49 @@
   self.window.title = self.photo.name;
   self.window.representedURL = self.photo.url;
   self.photoView.image = self.photo.image;
-  self.tagsField.objectValue = self.photo.tags;
   self.tagsField.delegate = self;
+  self.tagsField.objectValue = [self photoTagsFromTagNames:self.photo.tags];
+}
+
+- (NSArray *)photoTagsFromTagNames:(NSArray *)tagNames {
+  return [tagNames arrayByMappingObjectsUsingBlock:^id (id obj) {
+    return [self tokenField:nil representedObjectForEditingString:obj];
+  }];
 }
 
 #pragma mark - NSTokenFieldDelegate
 
 - (NSArray *)tokenField:(NSTokenField *)tokenField shouldAddObjects:(NSArray *)tokens atIndex:(NSUInteger)index {
   NSArray *existingTags = self.photo.tags;
+  NSMutableArray *addedTagNames = [NSMutableArray array];
   NSMutableArray *addedTags = [NSMutableArray array];
-  for (NSString *tag in tokens) {
-    if (![existingTags containsObject:tag]) {
+  for (HMCPhotoTag *tag in tokens) {
+    if (![existingTags containsObject:tag.name]) {
+      [addedTagNames addObject:tag.name];
       [addedTags addObject:tag];
     }
   }
-  [self.photo insertTags:addedTags atIndex:index];
+  [self.photo insertTags:addedTagNames atIndex:index];
   return addedTags;
+}
+
+- (NSString *)tokenField:(NSTokenField *)tokenField displayStringForRepresentedObject:(id)representedObject {
+  if ([representedObject isKindOfClass:[HMCPhotoTag class]]) {
+    return ((HMCPhotoTag *)representedObject).name;
+  }
+  return nil;
+}
+
+- (id)tokenField:(NSTokenField *)tokenField representedObjectForEditingString:(NSString *)editingString {
+  HMCPhotoTag *photoTag = [[HMCPhotoTag alloc] initWithName:editingString];
+  photoTag.delegate = self;
+  return photoTag;
+}
+
+#pragma mark - HMCPhotoTagDelegate
+
+- (void)tagWillBeDeleted:(HMCPhotoTag *)tag {
+  [self.photo removeTag:tag.name];
 }
 
 @end

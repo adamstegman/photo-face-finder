@@ -14,5 +14,6 @@
 - (id)initWithURL:(NSURL *)url;
 
 - (void)insertTags:(NSArray *)tags atIndex:(NSUInteger)index;
+- (void)removeTag:(NSString *)tag;
 
 @end

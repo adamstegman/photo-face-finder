@@ -40,18 +40,23 @@
 }
 
 - (NSArray *)tags {
-  NSArray *tags;
-  [self.url getResourceValue:&tags forKey:NSURLTagNamesKey error:NULL];
-  if (tags) {
-    return tags;
+  NSArray *tagNames;
+  [self.url getResourceValue:&tagNames forKey:NSURLTagNamesKey error:NULL];
+  if (tagNames) {
+    return tagNames;
   } else {
     return [NSArray array];
   }
 }
 
 - (void)insertTags:(NSArray *)tags atIndex:(NSUInteger)index {
+  NSArray *newTags = [self.tags arrayByAddingObjectsFromArray:tags];
+  [self.url setResourceValue:newTags forKey:NSURLTagNamesKey error:NULL];
+}
+
+- (void)removeTag:(NSString *)tag {
   NSMutableArray *newTags = [self.tags mutableCopy];
-  [newTags insertObjects:tags atIndexes:[NSIndexSet indexSetWithIndex:index]];
+  [newTags removeObject:tag];
   [self.url setResourceValue:newTags forKey:NSURLTagNamesKey error:NULL];
 }
 

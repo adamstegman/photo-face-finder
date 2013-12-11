@@ -23,8 +23,7 @@ static NSArray *HMCPhotoTypes;
   return [self initWithDirectory:nil];
 }
 
-- (id)initWithDirectory:(NSURL *)directory
-{
+- (id)initWithDirectory:(NSURL *)directory {
     self = [super initWithWindowNibName:@"HMCPhotosWindowController"];
     if (self) {
       _directory = directory;
@@ -33,8 +32,7 @@ static NSArray *HMCPhotoTypes;
     return self;
 }
 
-- (void)windowDidLoad
-{
+- (void)windowDidLoad {
   [super windowDidLoad];
 
   // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
@@ -69,8 +67,7 @@ static NSArray *HMCPhotoTypes;
                                     [self directoryName]];
 }
 
-- (void)indicatePhotoSlurping:(BOOL)inProgress
-{
+- (void)indicatePhotoSlurping:(BOOL)inProgress {
   if (inProgress) {
     [self.progressIndicator startAnimation:nil];
     [self indicateNumberOfPhotos];
@@ -85,11 +82,9 @@ static NSArray *HMCPhotoTypes;
   if (!self.photoWindows) {
     self.photoWindows = [NSMutableDictionary dictionary];
   }
-  if (!self.photoWindows[photo.url]) {
-    HMCPhotoWindowController *photoWindow = [[HMCPhotoWindowController alloc] initWithPhoto:photo];
-    self.photoWindows[photo.url] = photoWindow;
-  }
-  [self.photoWindows[photo.url] showWindow:nil];
+  HMCPhotoWindowController *photoWindow = [[HMCPhotoWindowController alloc] initWithPhoto:photo];
+  self.photoWindows[photo.url] = photoWindow;
+  [photoWindow showWindow:nil];
 }
 
 - (void)slurpPhotos {

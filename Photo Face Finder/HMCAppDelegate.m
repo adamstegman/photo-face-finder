@@ -8,8 +8,7 @@
 
 @implementation HMCAppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
   // Insert code here to initialize your application
   NSURL *directory = [self requestPhotoDirectory];
   if (directory) {
@@ -21,11 +20,9 @@
   if (!self.directoryWindows) {
     self.directoryWindows = [NSMutableDictionary dictionary];
   }
-  if (!self.directoryWindows[directory]) {
-    HMCPhotosWindowController *photosWindow = [[HMCPhotosWindowController alloc] initWithDirectory:directory];
-    self.directoryWindows[directory] = photosWindow;
-  }
-  [self.directoryWindows[directory] showWindow:nil];
+  HMCPhotosWindowController *photosWindow = [[HMCPhotosWindowController alloc] initWithDirectory:directory];
+  self.directoryWindows[directory] = photosWindow;
+  [photosWindow showWindow:nil];
 }
 
 - (NSURL *)requestPhotoDirectory {

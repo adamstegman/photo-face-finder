@@ -120,7 +120,7 @@ static NSArray *HMCPhotoTypes;
                       ofObject:(id)object
                         change:(NSDictionary *)change
                        context:(void *)context {
-  if ([keyPath isEqualTo:@"selectionIndex"] && [self.photosArrayController selectionIndex]) {
+  if ([keyPath isEqualTo:@"selectionIndex"] && [self.photosArrayController selectionIndex] != NSNotFound) {
     HMCPhoto *selectedPhoto = [[self.photosArrayController selectedObjects] firstObject];
     [self openWindowForPhoto:selectedPhoto];
   }

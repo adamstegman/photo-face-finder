@@ -36,7 +36,7 @@
 
 - (NSArray *)photoTagsFromTagNames:(NSArray *)tagNames {
   __weak __block id _self = self;
-  return [tagNames arrayByMappingObjectsUsingBlock:^id (id obj) {
+  return [tagNames arrayByMappingObjectsUsingBlockWithHMC:^id (id obj) {
     return [_self tokenField:nil representedObjectForEditingString:obj];
   }];
 }

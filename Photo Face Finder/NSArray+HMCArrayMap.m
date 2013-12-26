@@ -2,7 +2,7 @@
 
 @implementation NSArray (HMCArrayMap)
 
-- (NSArray *)arrayByMappingObjectsUsingBlock:(id (^)(id obj))block {
+- (NSArray *)arrayByMappingObjectsUsingBlockWithHMC:(id (^)(id obj))block {
   __block NSMutableArray *newArray = [NSMutableArray array];
   [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
     [newArray addObject:block(obj)];

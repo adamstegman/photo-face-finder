@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NSArray (HMCArrayMap)
-- (NSArray *)arrayByMappingObjectsUsingBlock:(id (^)(id obj))block;
+- (NSArray *)arrayByMappingObjectsUsingBlockWithHMC:(id (^)(id obj))block;
 @end

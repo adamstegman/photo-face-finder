@@ -25,6 +25,7 @@
 		66613E8C181CF96A0036EA19 /* HMCPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 66613E8B181CF96A0036EA19 /* HMCPhoto.m */; };
 		66613E901822338E0036EA19 /* HMCPhotoWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66613E8E1822338E0036EA19 /* HMCPhotoWindowController.m */; };
 		66613E911822338E0036EA19 /* HMCPhotoWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66613E8F1822338E0036EA19 /* HMCPhotoWindowController.xib */; };
+		667C202D186BC47A000682D7 /* HMCMutableMetadataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 667C202C186BC47A000682D7 /* HMCMutableMetadataItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		66613E8D1822338E0036EA19 /* HMCPhotoWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMCPhotoWindowController.h; sourceTree = "<group>"; };
 		66613E8E1822338E0036EA19 /* HMCPhotoWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMCPhotoWindowController.m; sourceTree = "<group>"; };
 		66613E8F1822338E0036EA19 /* HMCPhotoWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMCPhotoWindowController.xib; sourceTree = "<group>"; };
+		667C202B186BC47A000682D7 /* HMCMutableMetadataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMCMutableMetadataItem.h; sourceTree = "<group>"; };
+		667C202C186BC47A000682D7 /* HMCMutableMetadataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMCMutableMetadataItem.m; sourceTree = "<group>"; };
 		6694B538184F1637000537E6 /* HMCPhotoTagDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMCPhotoTagDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +156,8 @@
 				66427C0C184C169F0090BAEA /* NSArray+HMCArrayMap.h */,
 				66427C0D184C169F0090BAEA /* NSArray+HMCArrayMap.m */,
 				6694B538184F1637000537E6 /* HMCPhotoTagDelegate.h */,
+				667C202B186BC47A000682D7 /* HMCMutableMetadataItem.h */,
+				667C202C186BC47A000682D7 /* HMCMutableMetadataItem.m */,
 			);
 			path = "Photo Face Finder";
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 				66613E5B181CCC550036EA19 /* main.m in Sources */,
 				66613E88181CE5A80036EA19 /* HMCPhotosWindowController.m in Sources */,
 				66613E62181CCC550036EA19 /* HMCAppDelegate.m in Sources */,
+				667C202D186BC47A000682D7 /* HMCMutableMetadataItem.m in Sources */,
 				66613E8C181CF96A0036EA19 /* HMCPhoto.m in Sources */,
 				66613E901822338E0036EA19 /* HMCPhotoWindowController.m in Sources */,
 			);

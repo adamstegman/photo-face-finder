@@ -1,6 +1,9 @@
 #import "HMCPhoto.h"
+#import "HMCMutableMetadataItem.h"
+#import <sys/xattr.h>
 
 @interface HMCPhoto ()
+- (HMCMutableMetadataItem *)metadataItem;
 @end
 
 @implementation HMCPhoto
@@ -8,6 +11,7 @@
 @dynamic image;
 @dynamic name;
 @dynamic tags;
+@dynamic comment;
 
 - (id)init {
   return [self initWithURL:nil];
@@ -19,6 +23,22 @@
     _url = url;
   }
   return self;
+}
+
+- (NSString *)comment {
+  return [[self metadataItem] valueForAttribute:NSMetadataItemFinderCommentKey];
+}
+
+- (void)setComment:(NSString *)comment {
+  // FIXME: use a custom attribute
+//  [[self metadataItem] setFinderComment:comment];
+  
+//  setxattr([self.url fileSystemRepresentation],
+//           [NSMetadataItemFinderCommentKey UTF8String],
+//           [comment UTF8String],
+//           [comment lengthOfBytesUsingEncoding:NSUTF8StringEncoding],
+//           0,
+//           0);
 }
 
 - (NSImage *)image {
@@ -58,6 +78,13 @@
   NSMutableArray *newTags = [self.tags mutableCopy];
   [newTags removeObject:tag];
   [self.url setResourceValue:newTags forKey:NSURLTagNamesKey error:NULL];
+}
+
+- (HMCMutableMetadataItem *)metadataItem {
+  if (!_metadataItem && self.url) {
+    _metadataItem = [[HMCMutableMetadataItem alloc] initWithURL:self.url];
+  }
+  return _metadataItem;
 }
 
 #pragma mark - NSCopying

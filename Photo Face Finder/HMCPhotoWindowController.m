@@ -32,6 +32,8 @@
   self.photoView.image = self.photo.image;
   self.tagsField.delegate = self;
   self.tagsField.objectValue = [self photoTagsFromTagNames:self.photo.tags];
+  self.commentField.delegate = self;
+  self.commentField.stringValue = self.photo.comment;
 }
 
 - (NSArray *)photoTagsFromTagNames:(NSArray *)tagNames {
@@ -39,6 +41,13 @@
   return [tagNames arrayByMappingObjectsUsingBlockWithHMC:^id (id obj) {
     return [_self tokenField:nil representedObjectForEditingString:obj];
   }];
+}
+
+#pragma mark - NSTextFieldDelegate
+
+- (BOOL)control:(NSControl *)control textShouldEndEditing:(NSText *)fieldEditor {
+  self.photo.comment = fieldEditor.string;
+  return YES;
 }
 
 #pragma mark - NSTokenFieldDelegate
